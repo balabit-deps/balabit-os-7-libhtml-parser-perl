@@ -1,0 +1,39 @@
+Source: libhtml-parser-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Krzysztof Krzyzaniak (eloy) <eloy@debian.org>,
+           Damyan Ivanov <dmn@debian.org>,
+           Salvatore Bonaccorso <carnil@debian.org>,
+           Dominic Hargreaves <dom@earth.li>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: perl,
+               debhelper (>= 9.20120312),
+               libhtml-tagset-perl,
+               libhttp-message-perl,
+               libtest-pod-perl,
+               liburi-perl
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libhtml-parser-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libhtml-parser-perl.git
+Homepage: https://metacpan.org/release/HTML-Parser
+
+Package: libhtml-parser-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libhtml-tagset-perl,
+         liburi-perl
+Recommends: libhttp-message-perl
+Suggests: libdata-dump-perl
+Enhances: libwww-perl
+Description: collection of modules that parse HTML text documents
+ HTML::Parser is a collection of modules useful for handling HTML documents.
+ These modules used to be part of the libwww-perl distribution, but are now
+ unbundled in order to facilitate a separate development track.
+ .
+ Objects of the HTML::Parser class will recognize markup and separate it from
+ content data. As different kinds of markup are recognized, the corresponding
+ event handler is invoked. The document to be parsed may also be supplied in
+ arbitrary chunks, making on-the-fly parsing of network documents possible.
